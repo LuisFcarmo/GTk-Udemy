@@ -4,9 +4,9 @@
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkWindow" id="mainwindow">
     <property name="can-focus">False</property>
-    <signal name="destroy" handler="on_mainwindow_destroy" swapped="no"/>
+    <signal name="destroy" handler="on_main_window_destroy" swapped="no"/>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="box">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
@@ -55,8 +55,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao1">
-                <property name="label" translatable="yes">1
-</property>
+                <property name="label" translatable="yes">1</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -84,8 +83,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao3">
-                <property name="label" translatable="yes">3
-</property>
+                <property name="label" translatable="yes">3</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -99,8 +97,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao4">
-                <property name="label" translatable="yes">4
-</property>
+                <property name="label" translatable="yes">4</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -114,8 +111,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao5">
-                <property name="label" translatable="yes">5
-</property>
+                <property name="label" translatable="yes">5</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -129,8 +125,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao6">
-                <property name="label" translatable="yes">6
-</property>
+                <property name="label" translatable="yes">6</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -144,8 +139,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao7">
-                <property name="label" translatable="yes">7
-</property>
+                <property name="label" translatable="yes">7</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -159,8 +153,7 @@
             </child>
             <child>
               <object class="GtkButton" id="botao8">
-                <property name="label" translatable="yes">8
-</property>
+                <property name="label" translatable="yes">8</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -218,7 +211,7 @@
             <child>
               <object class="GtkButton" id="botao_soma">
                 <property name="label" translatable="yes">
-</property>
++</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -293,7 +286,7 @@
             <child>
               <object class="GtkButton" id="botao_raizquadrada">
                 <property name="label" translatable="yes">
-</property>
+sqrt</property>
                 <property name="name">bt_raizquadrada</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>

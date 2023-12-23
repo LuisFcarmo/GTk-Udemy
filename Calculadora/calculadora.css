@@ -1,0 +1,22 @@
+#botao_soma {
+    background-size: 100% 100%;
+    background-position:  center;
+}
+#botao_soma:hover {
+    background-size: 120% 120%;
+}
+#mainwindow {
+    background-color: rgba(111, 105, 105, 0.313);
+}
+#digito {
+    font-size: 30px;
+    color: brown;
+    background-color: blueviolet;
+}
+#display {
+    font-size: 200px;
+
+}
+#box {
+    background-color: blueviolet;
+}

@@ -6,7 +6,7 @@
     <property name="can-focus">False</property>
     <signal name="destroy" handler="on_main_window_destroy" swapped="no"/>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="box">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
@@ -211,7 +211,7 @@
             <child>
               <object class="GtkButton" id="botao_soma">
                 <property name="label" translatable="yes">
-</property>
++</property>
                 <property name="name">digito</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
@@ -286,7 +286,7 @@
             <child>
               <object class="GtkButton" id="botao_raizquadrada">
                 <property name="label" translatable="yes">
-</property>
+sqrt</property>
                 <property name="name">bt_raizquadrada</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>

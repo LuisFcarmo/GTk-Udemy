@@ -19,6 +19,16 @@ float primeiro_numero = 0;
  * 
 */
 
+void usar_estilo () {
+    GtkCssProvider *css_provider = gtk_css_provider_new();
+    gtk_css_provider_load_from_path(css_provider, "calculadora.css", false);
+    gtk_style_context_add_provider_for_screen(
+            gdk_screen_get_default(),
+            GTK_STYLE_PROVIDER(css_provider),
+            GTK_STYLE_PROVIDER_PRIORITY_APPLICATION
+    );
+}
+
 float lerdisplay () {
     const gchar *string = gtk_entry_get_text(display);
     float numero = atof(string);
@@ -73,7 +83,9 @@ void on_botao_divisao_clicked () {
 };  
 
 void on_botao_porcentagem_clicked () {
+    primeiro_numero = lerdisplay();
     strcpy(operacao, "porcentagem");
+    limpardisplay = true;
 };
 
 void on_botao_multiplicação_clicked () {
@@ -97,9 +109,7 @@ void on_botao_igual_clicked () {
     else if (strcmp(operacao, "soma") == 0) {
         resultado =  segundo_numero + primeiro_numero;
     } 
-    else if (strcmp(operacao, "divisão") == 0) {
-        printf("%f %f", segundo_numero, primeiro_numero);
-
+    else if (strcmp(operacao, "divisão") == 0) { 
         resultado = primeiro_numero / segundo_numero;
     }
     else if (strcmp(operacao, "subtração") == 0) {
@@ -112,7 +122,7 @@ void on_botao_igual_clicked () {
         resultado = sqrtf(segundo_numero);
     }
     else if (strcmp(operacao, "porcentagem") == 0) {
-        resultado =  segundo_numero/100;
+        resultado =  (primeiro_numero * segundo_numero)/100;
     }
     sprintf(resultado2,"%f", resultado);
     gtk_entry_set_text(display, resultado2);
@@ -143,6 +153,8 @@ int main (int argc, char *argv[]) {
 
 
     GtkWidget *window = GTK_WIDGET(gtk_builder_get_object(builder, "mainwindow"));
+
+    usar_estilo();
     gtk_widget_show_all(window);
     gtk_main();
 
