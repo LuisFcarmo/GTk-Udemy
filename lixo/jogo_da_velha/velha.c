@@ -41,7 +41,6 @@ void verify_column () {
         for (int linha = 0; linha < 3; linha++) {
             if (matriz[linha][coluna] == 'X') {
                 X++;
-                g_print("%c", matriz[linha][coluna]);
             } 
             if (matriz[linha][coluna] == 'O') {
                 O++;
@@ -92,7 +91,6 @@ void verify_sec () {
         max--;
     }
     g_print("%d", X);
-    g_print("%d", O);
     if (X == 3) {
         player1_win = true;
     }
